@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <style>/*Here I have used internal styling using CSS*/
+        
+        h1{
+            color:black;
+            
+        }
+        #heading{
+            background-color: white;
+            width:100%;
+            height:50%;
+            border-color:black;
+            border-top:100%;
+        }
+        #secondNum{
+            margin-left:20px;
+            margin-bottom:30px;
+        }
+        #firstNum{
+            margin-bottom:15px;
+        }
+        #tochange{
+            color:black;
+            border-color:red;
+            margin-top:25px;
+            border:10px;
+            
+        }
+        #box{
+            border:solid black 10px;
+            height:50px;
+            margin-top:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="heading">
+        <center>
+            <h1>Calculator App</h1>
+        </center>   
+    </div>  
+    <div>
+        <center>
+            <label for="input one" >Enter a number</label>
+            <input type="number" id="firstNum" placeholder=""><br>
+            <label for="input two" >Enter a number</label>
+            <input type="number" id="secondNum" placeholder=""><br>
+            <button type="button" onclick="Addition()" >Add</button>
+            <button type="button" onclick="Subtraction()">Subtract</button>
+            <button type="button" onclick="Muliplication()">Multiply</button>
+            <button type="button" onclick="Division()">Divide</button>
+            <button type="button" onclick="Exponent()">Exponent</button>
+        </center>
+        <center>
+            <div>The answer is...</div>
+            <div id="box">
+                <center>
+                    <div id="tochange"></div>
+                </center>
+            </div>
+        </center>
+
+        
+
+    </div>
+    
+</body>
+<script>//This is the JavaScript code for DOM manipulation
+//here each of the function is described to be accessed and modified
+    
+    function Addition(){
+        var firstNum=document.getElementById('firstNum').value;
+    var secondNum=document.getElementById('secondNum').value;
+    firstNum=parseInt(firstNum);
+    secondNum=parseInt(secondNum);
+        
+    var answer=firstNum+secondNum;
+    document.getElementById('tochange').innerHTML=answer;
+
+}
+    function Subtraction(){
+        var firstNum=document.getElementById('firstNum').value;
+    var secondNum=document.getElementById('secondNum').value;
+    firstNum=parseInt(firstNum);
+    secondNum=parseInt(secondNum);
+        
+        var answer=firstNum-secondNum;
+        document.getElementById('tochange').innerHTML=answer;
+    }
+
+    function Muliplication  (){
+        var firstNum=document.getElementById('firstNum').value;
+    var secondNum=document.getElementById('secondNum').value;
+    firstNum=parseInt(firstNum);
+    secondNum=parseInt(secondNum);
+        var answer=firstNum*secondNum;
+        document.getElementById('tochange').innerHTML=answer;
+
+    }
+
+    function Division(){
+        var firstNum=document.getElementById('firstNum').value;
+    var secondNum=document.getElementById('secondNum').value;
+    firstNum=parseInt(firstNum);
+    secondNum=parseInt(secondNum);
+        var answer=firstNum/secondNum;
+        document.getElementById('tochange').innerHTML=answer;
+    }
+
+    function Exponent(){
+        var firstNum=document.getElementById('firstNum').value;
+    var secondNum=document.getElementById('secondNum').value;
+    firstNum=parseInt(firstNum);
+    secondNum=parseInt(secondNum);
+        var answer=firstNum**secondNum;
+        document.getElementById('tochange').innerHTML=answer;
+
+    }
+    
+    
+
+    
+    
+</script>
+</html>
